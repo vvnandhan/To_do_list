@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My To-Do List</title>
+  <!-- Load the updated styles -->
+  <link rel="stylesheet" href="{% static 'todo/styles.css' %}">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>My To-Do List</h1>
+    </header>
+
+    <main>
+      <div class="inputContainer">
+        <input type="text" id="taskInput" placeholder="Add task...">
+        <button id="addTask">Add</button>
+      </div>
+
+      <div class="filters">
+        <!-- Note: "All" button is set as active by default -->
+        <button data-filter="all" class="active">All</button>
+        <button data-filter="active">Active</button>
+        <button data-filter="completed">Completed</button>
+      </div>
+
+      <ul id="tasks"></ul>
+
+      <button id="clearAll">Clear All</button>
+    </main>
+
+    <footer>
+      &copy; 2025 My To-Do List App. All Rights Reserved.
+    </footer>
+  </div>
+
+  <!-- Load Sortable.js for drag-and-drop functionality -->
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  <!-- Your main JS file -->
+  <script src="{% static 'todo/script.js' %}"></script>
+</body>
+</html>

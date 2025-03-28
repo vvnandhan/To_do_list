@@ -1,0 +1,207 @@
+/* Import both Inter and Playfair Display fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Playfair+Display:wght@700&display=swap');
+
+/* GLOBAL RESET & BASE */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* Pastel gradient background */
+  background: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+  font-family: 'Inter', sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+}
+
+/* MAIN CONTAINER */
+.container {
+  width: 500px;
+  max-width: 90%;
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  /* Use Playfair Display for an elegant heading */
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  color: #2c3e50;
+  margin-bottom: 8px;
+  letter-spacing: 1px;
+}
+
+/* MAIN SECTION */
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* INPUT CONTAINER */
+.inputContainer {
+  display: flex;
+  gap: 8px;
+}
+
+.inputContainer input {
+  flex: 1;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 50px 0 0 50px;
+  font-size: 1rem;
+  outline: none;
+  background: #fff;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+}
+
+.inputContainer button {
+  padding: 14px 20px;
+  border: none;
+  border-radius: 0 50px 50px 0;
+  font-size: 1rem;
+  cursor: pointer;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: #fff;
+  font-weight: 500;
+  transition: opacity 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.inputContainer button:hover {
+  opacity: 0.9;
+}
+
+/* FILTER BUTTONS */
+.filters {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+}
+
+.filters button {
+  border: 1px solid #ff7e5f;
+  background: transparent;
+  color: #ff7e5f;
+  border-radius: 20px;
+  padding: 6px 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.filters button:hover {
+  background: #ff7e5f;
+  color: #fff;
+}
+
+/* Active state for filter buttons */
+.filters button.active {
+  background: #ff7e5f;      /* Solid accent background */
+  color: #fff;
+  border: 2px solid #ff7e5f;
+  box-shadow: 0 2px 8px rgba(255, 126, 95, 0.5);
+  transform: scale(1.05);   /* Slightly enlarge for emphasis */
+}
+
+/* TASK LIST */
+#tasks {
+  list-style: none;
+  max-height: 300px;
+  overflow-y: auto;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#tasks li {
+  background: rgba(255, 255, 255, 0.9);
+  padding: 12px 16px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  transition: background 0.3s ease;
+}
+
+#tasks li:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+#tasks li.completed {
+  opacity: 0.7;
+  text-decoration: line-through;
+}
+
+#tasks li input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+#tasks li span {
+  flex: 1;
+  font-size: 1rem;
+  color: #333;
+  font-family: 'Inter', sans-serif;
+}
+
+#tasks li button {
+  background: transparent;
+  border: none;
+  color: #e74c3c;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+#tasks li button:hover {
+  transform: scale(1.1);
+}
+
+/* CLEAR ALL BUTTON */
+#clearAll {
+  background: #ff4f4f;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 16px;
+  color: #fff;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  margin: 0 auto;
+  display: block;
+}
+
+#clearAll:hover {
+  background: #e64444;
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  font-size: 0.85rem;
+  color: #2c3e50;
+  opacity: 0.9;
+  margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+}
